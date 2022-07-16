@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewpoint" content="width =device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Poppins:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<title>Freedom of Depression</title>
+</head>
+<body>
+  <!---Header---->
+  <header>
+    <nav class="navbar">
+      <div class="container">
+        <a href="index.html" class="navbar-brand"><span>Freedom</span> of Depression</a>
+        <div class="navbar-nav">
+          <a href="">Home</a>
+          <a href="#blog">Articles</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </nav>
+    <div class="banner">
+      <div class="container">
+        <h1 class="banner-title">
+          Freedom <span class="auto-type"></span>
+        </h1>
+        <p>Whatever your going through this is the blog for you!</p>
+        <form action="https://www.google.com/search" method="get" class="search-bar">
+          <input type = "text" class= "search-input" placeholder= "Find your escape?" name="q">
+          <button type="submit" class="search-btn"><i class="fa fa-search"></i></button>
+        </form>
+      </div>
+    </div>
+  </header>
+  <!---Articles-->
+  <section id="blog">
+    <div class="blog-heading">
+      <span></span>
+      <h3>Articles</h3>
+    </div>
+    <div class="blog-container">
+      <div class="blog-box">
+        <div class="blog-img">
+          <img src="file:///C:/Users/empce/Downloads/Blog-site/images/blogpost1.jpg"
+        </div>
+        <div class="blog-text">
+          <span>By J.R Whitfield | 16 July 2022</span>
+          <a href="blog.html" class="blog-title">You Are Never Alone !</a>
+          <p>Have you ever felt down & dark with no light in sight? thinking to yourself why is this your life? scared to tell others in fear of spite...</p>
+          <a href="blog.html">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-container">
+      <div class="blog-box">
+        <div class="blog-img">
+          <img src="file:///C:/Users/empce/Downloads/Blog-site/images/doubt.jpeg"
+        </div>
+        <div class="blog-text">
+          <span>By J.R Whitfield | 16 July 2022</span>
+          <a href="doubts.html" class="blog-title">Doubts That Stick !</a>
+          <p>What are your fears? & how is it natural? how do we feel & know how things would be after? is it our mind a superconscious matter?...</p>
+          <a href="doubts.html">Read More</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="blog-container">
+      <div class="blog-box">
+        <div class="blog-img">
+          <img src="file:///C:/Users/empce/Downloads/Blog-site/images/lesbrown.jpg"
+        </div>
+        <div class="blog-text">
+          <span>15 June 2022 | Power of Hope</span>
+          <a href="#" class="blog-title">How Do You Feel About Your Life Experience So Far?</a>
+          <p>Do you ever feel down, low, lost on faith wondering why does everything happen to you, what if i was to tell you that it is all part of the process.</p>
+          <a href="article.html">Read More</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!--About-->
+  <section id="about">
+    <div class="about-container">
+      <img src="file:///C:/Users/empce/Downloads/Blog-site/images/about.jpg">
+      <div class="about-text">
+        <h2>About Us</h2>
+        <h4><i class="fa fa-quote-left"></i>  Life Is Like School, For Failures Are Lessons Through Lectures Progression, Wins Come In Sections & You Lose Whats Unfinished! <i class="fa fa-quote-right"></i></h4>
+        <p>"I am an aspiring Front-end developer 'from temp to tech' is my favorite slogan I am the middle child of 3 siblings. I always had a knack for writing as it seems to come second nature to me along with the struggles of depression to tag along. which is why I decided to create our blog because it's not just for me but for others who are affected by the same similarities. this is an open forum so feel free to contact me as I am always open to lending a ear in need."</p>
+      </div>
+    </div>
+    <div>
+  </section>
+
+  <!--Contact-->
+  <section id="contact">
+    <form onsubmit="sendEmail(); reset(); return false;">
+      <h3>Contact Us</h3>
+      <input type="text" id="name" placeholder="Your name" required>
+      <input type="email" id="email" placeholder="Email address" required>
+      <input type="text" id="phone" placeholder="Phone Number" required>
+      <textarea id="message" row="4"placeholder="How can we help you?"></textarea>
+      <button>Submit</button>
+    </form>
+  </section>
+  <script src="https://smtpjs.com/v3/smtp.js"></script>
+  <script>
+    function sendEmail(){
+          Email.send({
+              Host : "smtp.gmail.com",
+              Username : "WhitfieldG94@gmail.com",
+              Password : "2030E920240492C0774C7FD3AF8E5170FB15",
+              To : 'empceojr2@gmail.com',
+              From : document.getElementById("email").value,
+              Subject : "New Contact Form Inquiry",
+              Body : "Name: " + document.getElementById("name").value
+                  + "<br> Email: " + document.getElementById("email").value
+                  + "<br> Phone Number: " + document.getElementById("phone").value
+                  + "<br> Message: " + document.getElementById("message").value
+          }).then(
+          message => alert("Message Sent Successfully")
+      );
+    }
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <script>
+    var typed = new Typed(".auto-type",{
+      strings: ["of Speech","of Depression"],
+      typeSpeed: 75,
+      backSpeed: 75,
+      loop: false,
+    })
+
+  </script>
+  <!--Footer-->
+  <section id="footer">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#blog">Articles</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <p class="copyright">
+      Freedom Of Depression @ 2022</p>
+  </section>
+</body>
+</html>
